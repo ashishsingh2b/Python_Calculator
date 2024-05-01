@@ -1,0 +1,70 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <style>
+            body{
+                background-color:lightblue;
+            }
+            .btn {
+                background-color: black; 
+                color: white; 
+                border: 2px solid #04AA6D;
+            }
+            .frm 
+            {
+                text-align:center;
+                border:4px solid black;
+                margin-left:25%;
+                margin-top:15%;
+                margin-right:18%;
+                background-color:lightgreen;
+
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>marksheet</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <form  class="frm" method="POST">
+            {%if error %}
+            <div role="alert">
+                All field Mendatatory
+            </div>
+            {% endif %}
+            <h1 >Marksheet</h1>
+
+            {%csrf_token%}
+            <label>Subject1</label>
+            <input text="text" name="subject1" placeholder="Math"><br>
+            <label>Subject2</label> 
+            <input text="text" name="subject2" placeholder="English"><br>
+            <label>Subject3</label>
+            <input text="text" name="subject3" placeholder="Science"><br>
+            <label>Subject4</label>
+            <input text="text" name="subject4" placeholder="Hindi"><br>
+            <label>Subject5</label>
+            <input text="text" name="subject5" placeholder="Social Science"><br><br>
+            <button class="btn" type="submit">Marksheet</button> <br><br>
+            <label >Total</label>
+            <input type="text" value="{{total}}">
+            <label >Percentage</label>
+            <input type="text" value="{{per}}">
+            <label >Division</label>
+            <input type="text" value="{{div}}">
+        </form>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
